@@ -1,0 +1,33 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Newsletter</h1>
+             <p>
+                <% if (currentUser.admin == true) {%>
+                <a class="btn btn-primary btn-large" href="/new/new">Add New news</a>
+                <a class="btn btn-primary btn-large" href="/newadmin">Add admin</a>
+                <%}%>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% news.forEach(function(news){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= news.image %>">
+                   <div class="caption">
+                       <h4><%= news.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/new/<%= news._id %>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% })%>
+    </div>
+</div>
+
+<% include ../partials/footer %>
