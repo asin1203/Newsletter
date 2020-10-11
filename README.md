@@ -1,19 +1,43 @@
 # app2
-Newsletter using Node js
+# **Newsletter**
+## using Nodejs
 
-Instructions
+## Setup instructions
+### **Server**
 
-1-Clone repository
-git clone https://github.com/asin1203/app2.git 
+* **Step 1**
 
-2-Install NPM packages
-npm i
+    Clone this repo
+    
+        git clone https://github.com/asin1203/app2.git && cd app2
 
-3-For using local database 
-mongo deamon should run in a terminal
-Use command in a new terminal :
-mongod 
+* **Step 2**
 
-4-Run the app using command
-node app.js
+    Install the dependencies :
+    npm i
+        
+        
+* **Step 3**
+
+    Running mongo deamon in background
+    
+      Requirements : mongodb installation complete and path added to the environment variable.
+      (Link : https://www.youtube.com/watch?v=MCpbfYvvoPY&feature=emb_logo)
+      
+      run command "mongod" in windows powershell window.
+      
+* **Step 4**
+
+    To run the server:
+       In the folder of which contains app.js
+           
+           node app.js
+        
+
+### **Use app in browser**
+
+    New window with url :
+
+        * http://localhost:3000/
+    
 
