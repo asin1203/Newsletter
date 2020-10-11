@@ -32,20 +32,26 @@ app.get("/register", function(req, res){
    res.render("register"); 
 });
 
-//Creating a admin before hand
-// var newUser = new User({username : "Admin",
-//                          email : "admin@gmail.com",
-//                            contact: "99465",
-//                            admin : true});
-// var password = "admin";
-// User.register(newUser, password, function(err, user){
-//  if(err)
-//  {
-//      console.log(err);
-// }else{
-//   console.log("created!");
-//  }
-// });
+
+
+
+/////Initial admin-----Run these lines once so that same admin doesn't get created every time the app runs-------/////
+var newUser = new User({username : "Admin",
+                          email : "admin@gmail.com",
+                            contact: "99465",
+                            admin : true});
+ var password = "admin";
+ User.register(newUser, password, function(err, user){
+  if(err)
+  {
+      console.log(err);
+ }else{
+   console.log("created!");
+  }
+ });
+/////-----------------------------------------------------------------------------------------------------------////
+
+
 
 app.post("/register", function(req, res){
     var newUser = new User({username: req.body.username,
