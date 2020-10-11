@@ -13,8 +13,9 @@
 
 * **Step 2**
 
-    Install the dependencies :
-    npm i
+    Installing dependencies 
+    
+        npm i
         
         
 * **Step 3**
